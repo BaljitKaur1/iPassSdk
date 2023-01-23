@@ -17,7 +17,7 @@ Pod::Spec.new do |spec|
 
   spec.name         = "iPassSdk"
   spec.version      = "0.0.1"
-  spec.summary      = "A short description of iPassSdk."
+  spec.summary      = "To generate SDK credentials"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -25,9 +25,10 @@ Pod::Spec.new do |spec|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   spec.description  = <<-DESC
+	The iPass SDK will be in Android and iOS Technology, which can be integrated with the (Android and iOS) Mobile applications by developers by fill the form to generate SDK credentials. After developers get the credentials, developers can integrate the iPass SDK with their applications after succeeding with the connection status with server.
                    DESC
 
-  spec.homepage     = "http://EXAMPLE/iPassSdk"
+  spec.homepage     = "https://github.com/BaljitKaur1/iPassSdk.git"
   # spec.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -38,8 +39,8 @@ Pod::Spec.new do |spec|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  spec.license      = "MIT (example)"
-  # spec.license      = { :type => "MIT", :file => "FILE_LICENSE" }
+  spec.license      = { :type => "MIT", :file => "LICENSE" }
+  # spec.license      = { :type => "MIT", :file => "LICENSE" }
 
 
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -79,7 +80,7 @@ Pod::Spec.new do |spec|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :git => "http://EXAMPLE/iPassSdk.git", :tag => "#{spec.version}" }
+  spec.source       = { :git => "https://github.com/BaljitKaur1/iPassSdk.git", :tag => "#{spec.version}" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
