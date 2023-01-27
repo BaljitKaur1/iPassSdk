@@ -1,0 +1,6 @@
+framework module Pods_iPassSdk_iPassSdkTests {
+  umbrella header "Pods-iPassSdk-iPassSdkTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

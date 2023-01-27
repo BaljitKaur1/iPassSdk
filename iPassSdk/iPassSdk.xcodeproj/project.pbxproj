@@ -7,10 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		20333CD4B1F9BCD69A3FFB67 /* Pods_iPassSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A1248BD3339B6A472A434FA /* Pods_iPassSdk.framework */; };
 		40184A52297E749C00C491EA /* iPassSdk.docc in Sources */ = {isa = PBXBuildFile; fileRef = 40184A51297E749C00C491EA /* iPassSdk.docc */; };
 		40184A58297E749C00C491EA /* iPassSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40184A4D297E749C00C491EA /* iPassSdk.framework */; };
 		40184A5D297E749C00C491EA /* iPassSdkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40184A5C297E749C00C491EA /* iPassSdkTests.swift */; };
 		40184A5E297E749C00C491EA /* iPassSdk.h in Headers */ = {isa = PBXBuildFile; fileRef = 40184A50297E749C00C491EA /* iPassSdk.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4F3B9D082805C37901E2F1B3 /* Pods_iPassSdk_iPassSdkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B41EB6E7908F755F5630882F /* Pods_iPassSdk_iPassSdkTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,11 +26,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		39703739DA484966161AE2B2 /* Pods-iPassSdk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iPassSdk.release.xcconfig"; path = "Target Support Files/Pods-iPassSdk/Pods-iPassSdk.release.xcconfig"; sourceTree = "<group>"; };
+		39D91133B8E3F9EC5E319D18 /* Pods-iPassSdk-iPassSdkTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iPassSdk-iPassSdkTests.debug.xcconfig"; path = "Target Support Files/Pods-iPassSdk-iPassSdkTests/Pods-iPassSdk-iPassSdkTests.debug.xcconfig"; sourceTree = "<group>"; };
 		40184A4D297E749C00C491EA /* iPassSdk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = iPassSdk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		40184A50297E749C00C491EA /* iPassSdk.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iPassSdk.h; sourceTree = "<group>"; };
 		40184A51297E749C00C491EA /* iPassSdk.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = iPassSdk.docc; sourceTree = "<group>"; };
 		40184A57297E749C00C491EA /* iPassSdkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iPassSdkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		40184A5C297E749C00C491EA /* iPassSdkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPassSdkTests.swift; sourceTree = "<group>"; };
+		4370190667E3D98CBB6E6A11 /* Pods-iPassSdk-iPassSdkTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iPassSdk-iPassSdkTests.release.xcconfig"; path = "Target Support Files/Pods-iPassSdk-iPassSdkTests/Pods-iPassSdk-iPassSdkTests.release.xcconfig"; sourceTree = "<group>"; };
+		8A1248BD3339B6A472A434FA /* Pods_iPassSdk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iPassSdk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B41EB6E7908F755F5630882F /* Pods_iPassSdk_iPassSdkTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iPassSdk_iPassSdkTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8A632A345AFD210FFAD8440 /* Pods-iPassSdk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iPassSdk.debug.xcconfig"; path = "Target Support Files/Pods-iPassSdk/Pods-iPassSdk.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20333CD4B1F9BCD69A3FFB67 /* Pods_iPassSdk.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +53,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				40184A58297E749C00C491EA /* iPassSdk.framework in Frameworks */,
+				4F3B9D082805C37901E2F1B3 /* Pods_iPassSdk_iPassSdkTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +66,8 @@
 				40184A4F297E749C00C491EA /* iPassSdk */,
 				40184A5B297E749C00C491EA /* iPassSdkTests */,
 				40184A4E297E749C00C491EA /* Products */,
+				5B996B825FDE296C2A73A456 /* Pods */,
+				63BD3A1EDEE4D00E08D17576 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -85,6 +97,27 @@
 			path = iPassSdkTests;
 			sourceTree = "<group>";
 		};
+		5B996B825FDE296C2A73A456 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F8A632A345AFD210FFAD8440 /* Pods-iPassSdk.debug.xcconfig */,
+				39703739DA484966161AE2B2 /* Pods-iPassSdk.release.xcconfig */,
+				39D91133B8E3F9EC5E319D18 /* Pods-iPassSdk-iPassSdkTests.debug.xcconfig */,
+				4370190667E3D98CBB6E6A11 /* Pods-iPassSdk-iPassSdkTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		63BD3A1EDEE4D00E08D17576 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8A1248BD3339B6A472A434FA /* Pods_iPassSdk.framework */,
+				B41EB6E7908F755F5630882F /* Pods_iPassSdk_iPassSdkTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -103,6 +136,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 40184A61297E749C00C491EA /* Build configuration list for PBXNativeTarget "iPassSdk" */;
 			buildPhases = (
+				893DEC2558D5180B35EDBE90 /* [CP] Check Pods Manifest.lock */,
 				40184A48297E749C00C491EA /* Headers */,
 				40184A49297E749C00C491EA /* Sources */,
 				40184A4A297E749C00C491EA /* Frameworks */,
@@ -121,9 +155,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 40184A64297E749C00C491EA /* Build configuration list for PBXNativeTarget "iPassSdkTests" */;
 			buildPhases = (
+				85B696D4329EAA7285182CB2 /* [CP] Check Pods Manifest.lock */,
 				40184A53297E749C00C491EA /* Sources */,
 				40184A54297E749C00C491EA /* Frameworks */,
 				40184A55297E749C00C491EA /* Resources */,
+				67F4A2B9A14A818AEF11572E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -188,6 +224,70 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		67F4A2B9A14A818AEF11572E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iPassSdk-iPassSdkTests/Pods-iPassSdk-iPassSdkTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iPassSdk-iPassSdkTests/Pods-iPassSdk-iPassSdkTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iPassSdk-iPassSdkTests/Pods-iPassSdk-iPassSdkTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		85B696D4329EAA7285182CB2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iPassSdk-iPassSdkTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		893DEC2558D5180B35EDBE90 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iPassSdk-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		40184A49297E749C00C491EA /* Sources */ = {
@@ -339,6 +439,7 @@
 		};
 		40184A62297E749C00C491EA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F8A632A345AFD210FFAD8440 /* Pods-iPassSdk.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -366,6 +467,7 @@
 		};
 		40184A63297E749C00C491EA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 39703739DA484966161AE2B2 /* Pods-iPassSdk.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -393,6 +495,7 @@
 		};
 		40184A65297E749C00C491EA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 39D91133B8E3F9EC5E319D18 /* Pods-iPassSdk-iPassSdkTests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -408,6 +511,7 @@
 		};
 		40184A66297E749C00C491EA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4370190667E3D98CBB6E6A11 /* Pods-iPassSdk-iPassSdkTests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
