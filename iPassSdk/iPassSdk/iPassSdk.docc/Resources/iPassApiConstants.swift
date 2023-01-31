@@ -19,7 +19,7 @@ struct Apis {
 
 // Token API
 struct TokenApi {
-    static let baseApi = (Apis.baseUrl) + "api/v1/ipass/" + "jwttoken"
+    static let baseApi = (Apis.baseUrl) + "api/v1/ipass/" + "jwttoken"   ///>>>Done
     static let first_name = "first_name"
     static let last_name = "last_name"
     static let email = "email"
@@ -28,7 +28,7 @@ struct TokenApi {
 
 // Initiate Account API
 struct InitiateAccountApi {
-    static let baseApi = (Apis.baseUrl) + "api/v1/ipass/" + "account/token"
+    static let baseApi = (Apis.baseUrl) + "api/v1/ipass/" + "account/token"    ///>>>Done
     static let customerInternalReference = "customerInternalReference"
     static let workflowDefinition = "workflowDefinition"
     static let callbackUrl = "callbackUrl"
@@ -40,7 +40,7 @@ struct InitiateAccountApi {
 // MARK: - Workflow APIs
 // Workflow Status API
 struct WorkflowStatusApi {
-    static let baseApi = (Apis.baseUrl) + "api/v1/ipass/" + "workflow/status"
+    static let baseApi = (Apis.baseUrl) + "api/v1/ipass/" + "workflow/status"     ///>>>Done
     static let accountId = "accountId"
     static let workflowExecutionId = "workflowExecutionId"
 }
@@ -99,7 +99,7 @@ struct WipeoutWholeAccountApi {
 // MARK: - KYC APIs
 // KYC Initiate Account API
 struct KYCInitiateAccountApi {
-    static let baseApi = (Apis.baseUrl) + "api/v1/" + "kyc/initate/account"
+    static let baseApi = (Apis.baseUrl) + "api/v1/" + "kyc/initate/account"   ///>>>Done
     static let accountId = "accountId"
     static let customerInternalReference = "customerInternalReference"
     static let workflowDefinition = "workflowDefinition"
@@ -107,7 +107,7 @@ struct KYCInitiateAccountApi {
 
 // KYC Prepare Data API
 struct KYCPrepareDataApi {
-    static let baseApi = (Apis.baseUrl) + "api/v1/" + "kyc/prepare_data"
+    static let baseApi = (Apis.baseUrl) + "api/v1/" + "kyc/prepare_data"    ///>>>Done
     static let accountId = "accountId"
     static let workflowExecutionId = "workflowExecutionId"
     static let credentialId = "credentialId"
@@ -118,21 +118,21 @@ struct KYCPrepareDataApi {
 
 // KYC Put Prepare Data API
 struct KYCPutPrepareDataApi {
-    static let baseApi = (Apis.baseUrl) + "api/v1/" + "kyc/putprepare/data"
+    static let baseApi = (Apis.baseUrl) + "api/v1/" + "kyc/putprepare/data"     ///>>>Done
     static let accountId = "accountId"
     static let workflowExecutionId = "workflowExecutionId"
 }
 
 // KYC Workflow Status API
 struct KYCWorkflowStatusApi {
-    static let baseApi = (Apis.baseUrl) + "api/v1/" + "ipass/kyc/workflow/status"
+    static let baseApi = (Apis.baseUrl) + "api/v1/" + "ipass/kyc/workflow/status"     ///>>>Done
     static let accountId = "accountId"
     static let workflowExecutionId = "workflowExecutionId"
 }
 
 // KYC Get Detail API
 struct KYCGetDetailApi {
-    static let baseApi = (Apis.baseUrl) + "api/v1/" + "ipass/kyc/user/detail"
+    static let baseApi = (Apis.baseUrl) + "api/v1/" + "ipass/kyc/user/detail"      ///>>>Done
     static let accountId = "accountId"
     static let workflowExecutionId = "workflowExecutionId"
 }
@@ -140,13 +140,13 @@ struct KYCGetDetailApi {
 // MARK: - Social Media Data APIs
 // Social Media Phone Data API
 struct SocialMediaPhoneDataApi {
-    static let baseApi = (Apis.baseUrl) + "api/v1/" + "ipass/social/media/phone"
+    static let baseApi = (Apis.baseUrl) + "api/v1/" + "ipass/social/media/phone"     ///>>>Done
     static let phone_number = "phone_number"
 }
 
 // Social Media Email Data API
 struct SocialMediaEmailDataApi {
-    static let baseApi = (Apis.baseUrl) + "api/v1/" + "ipass/social/media/email"
+    static let baseApi = (Apis.baseUrl) + "api/v1/" + "ipass/social/media/email"    ///>>>Done
     static let email = "email"
 }
 

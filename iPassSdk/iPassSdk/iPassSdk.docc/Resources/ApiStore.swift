@@ -44,7 +44,7 @@ class ApiStore : NSObject {
     }
     
     // MARK: - Base Request API
-    func baseRequestApi<T: Codable>(_ url: URLConvertible, _ method : HTTPMethod, _ params: [String: Any]? = nil, _ headers: [String: String]? = nil, completion: @escaping (_ response : T?) -> Void){
+    func baseRequestApi<T: Codable>(_ url: URLConvertible, _ method : HTTPMethod, _ params: [String: Any]? = nil, _ headers: [String: String]? = nil, completion: @escaping (Result<T, K>) -> Void){
         
         print(method)
         print(url)
@@ -61,6 +61,24 @@ class ApiStore : NSObject {
                                 if self.isValidJson(check: jsonData) {
                                     do {
                                         let dataModel = try JSONDecoder().decode(T.self, from: jsonData)
+                                        completion(dataModel)
+                                    } catch {
+                                        print(error.localizedDescription)
+                                    }
+                                    
+                                } else {
+                                    HUD.flash(.labeledError(title: "", subtitle: AppErrors.somethingWrong.localizedDescription), delay: 1.0)
+                                }
+                            }
+                        } catch {
+                            print(error.localizedDescription)
+                        }
+                    } else {
+                        do {
+                            if let jsonData = response.data {
+                                if self.isValidJson(check: jsonData) {
+                                    do {
+                                        let dataModel = try JSONDecoder().decode(K.self, from: jsonData)
                                         completion(dataModel)
                                     } catch {
                                         print(error.localizedDescription)

@@ -11,7 +11,6 @@ class SocialMediaDataApis : NSObject {
     static let shared = SocialMediaDataApis()
     
     // MARK: - Social Media Data APIs
-    
     // Social Media Phone Data API
     func socialMediaPhoneDataApi(_ view: UIView, _ phone_number: String,  completion: @escaping(_ : SocialMediaPhoneDataModel) -> Void) {
         HUD.show(.progress, onView: view)

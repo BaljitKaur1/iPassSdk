@@ -14,7 +14,7 @@ class LoginApis : NSObject {
     // -- Login and Registration APIs
     
     // Token API
-    func tokenApi(_ view: UIView, _ first_name: String, _ last_name: String, _ email: String, _ password: String, completion: @escaping(_ : TokenModel) -> Void) {
+    func tokenApi(_ view: UIView, _ first_name: String, _ last_name: String, _ email: String, _ password: String, completion: @escaping(Result<TokenModel, TokenModel>) -> Void) {
         HUD.show(.progress, onView: view)
         
         var url = URLComponents(string: TokenApi.baseApi)!
