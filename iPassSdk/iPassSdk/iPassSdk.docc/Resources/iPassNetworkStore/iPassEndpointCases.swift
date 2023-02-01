@@ -22,7 +22,7 @@ enum iPassEndpointCases: iPassEndpoint {
     }
     
     var headers: [String: String] {
-        var httpHeaders = ["Authorization": "Bearer tokennnnn"]
+        var httpHeaders = ["Authorization" : LocalStore.shared.authorization]
         return httpHeaders
     }
     

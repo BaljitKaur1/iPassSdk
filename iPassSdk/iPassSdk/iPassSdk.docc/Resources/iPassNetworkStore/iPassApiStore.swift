@@ -13,28 +13,28 @@ public class iPassApiStore: iPassApiCollection {
     }
     
     func request<T: Codable>(endpoint: iPassEndpointCases, params: Codable? = nil, completion: @escaping (ApiResult<T, K>) -> Void) {
-        networkRequest.request(endpoint.url, httpMethod: endpoint.httpMethod, params: params, headers: endpoint.headers) {(result: ApiResult<T, T>) in
+        networkRequest.request(endpoint.url, httpMethod: endpoint.httpMethod, params: params, headers: endpoint.headers) {(result: ApiResult<T, K>) in
             switch result {
             case .success(let value):
                 if let baseResponse = value {
                     if baseResponse.statusCode == 200 {
                         completion(.success(value?.data))
                     } else {
-                        completion(.failure(K))
+                        completion(.failure(value?.data))
                     }
                 }
                 else {
-                    completion(.failure(K))
+                    completion(.failure(value?.data))
                 }
             case .failure(let error):
                 completion(.failure(error))
             }
         }
     }
-}
-        
+    
+    
     func generateTokenApi(completion: @escaping (Result<TokenModel?, TokenErrorModel>) -> Void) {
-                        request(endpoint: iPassEndpointCases.generateToken) {(result: ApiResult<TokenModel?, TokenErrorModel>) in
+        request(endpoint: iPassEndpointCases.generateToken) {(result: ApiResult<TokenModel?, TokenErrorModel>) in
             switch result {
             case .success(let value):
                 if let value = value {
@@ -45,7 +45,4 @@ public class iPassApiStore: iPassApiCollection {
             }
         }
     }
-    
-    
 }
-

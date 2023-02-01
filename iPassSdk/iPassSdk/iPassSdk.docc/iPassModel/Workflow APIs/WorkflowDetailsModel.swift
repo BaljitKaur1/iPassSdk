@@ -7,6 +7,13 @@ import Foundation
 
 // MARK: - WorkflowDetailsModel
 struct WorkflowDetailsModel: Codable {
+    let status: Bool
+    let message: String
+    let data: WorkflowDetailsModelData
+}
+
+// MARK: - WorkflowDetailsModelData
+struct WorkflowDetailsModelData: Codable {
     let parseBody: ParseBody
 }
 
@@ -14,11 +21,11 @@ struct WorkflowDetailsModel: Codable {
 struct ParseBody: Codable {
     let workflow: Workflow
     let account: Account
-    let createdAt, startedAt, completedAt: String
-    let credentials: [ParseBodyCredential]
-    let decision: ParseBodyDecision
+    let createdAt: String
+    let credentials: [Credential]
     let steps: Steps
     let capabilities: Capabilities
+    let issupadmin, sessionsid, pubprivkey, email: String
 }
 
 // MARK: - Account
@@ -28,21 +35,19 @@ struct Account: Codable {
 
 // MARK: - Capabilities
 struct Capabilities: Codable {
-    let extraction, similarity: [DataCheck]
-    let liveness: [Liveness]
-    let dataChecks, imageChecks, usability: [DataCheck]
+    let extraction, similarity: [Extraction]
+    let liveness, dataChecks, imageChecks: [DataCheck]
+    let usability: [Usability]
 }
 
 // MARK: - DataCheck
 struct DataCheck: Codable {
     let id: String
-    let credentials: [DataCheckCredential]
-    let decision: DataCheckDecision
-    let data: DataCheckData?
+    let credentials: [Credential]
 }
 
-// MARK: - DataCheckCredential
-struct DataCheckCredential: Codable {
+// MARK: - Credential
+struct Credential: Codable {
     let id: String
     let category: Category
 }
@@ -53,23 +58,26 @@ enum Category: String, Codable {
     case selfie = "SELFIE"
 }
 
-// MARK: - DataCheckData
-struct DataCheckData: Codable {
-    let type, subType, issuingCountry, firstName: String?
-    let lastName, dateOfBirth, expiryDate, documentNumber: String?
-    let optionalMrzField1, nationality, currentAge: String?
-    let faceSearchFindings: FaceSearchFindings?
-    let similarity: String?
+// MARK: - Extraction
+struct Extraction: Codable {
+    let id: String
+    let credentials: [Credential]
+    let data: ExtractionData
 }
 
-// MARK: - FaceSearchFindings
-struct FaceSearchFindings: Codable {
-    let status: String
-    let findings: [String]
+// MARK: - ExtractionData
+struct ExtractionData: Codable {
 }
 
-// MARK: - DataCheckDecision
-struct DataCheckDecision: Codable {
+// MARK: - Usability
+struct Usability: Codable {
+    let id: String
+    let credentials: [Credential]
+    let decision: Decision?
+}
+
+// MARK: - Decision
+struct Decision: Codable {
     let type: String
     let details: Details
 }
@@ -77,47 +85,6 @@ struct DataCheckDecision: Codable {
 // MARK: - Details
 struct Details: Codable {
     let label: String
-}
-
-// MARK: - Liveness
-struct Liveness: Codable {
-    let id: String
-    let validFaceMapForAuthentication: String
-    let credentials: [DataCheckCredential]
-    let decision: DataCheckDecision
-    let data: LivenessData
-}
-
-// MARK: - LivenessData
-struct LivenessData: Codable {
-    let type: String
-    let predictedAge: Int
-    let ageConfidenceRange: String
-}
-
-// MARK: - ParseBodyCredential
-struct ParseBodyCredential: Codable {
-    let id: String
-    let category: Category
-    let parts: [Part]
-}
-
-// MARK: - Part
-struct Part: Codable {
-    let classifier: String
-    let href: String?
-}
-
-// MARK: - ParseBodyDecision
-struct ParseBodyDecision: Codable {
-    let type: String
-    let details: Details
-    let risk: Risk
-}
-
-// MARK: - Risk
-struct Risk: Codable {
-    let score: Int
 }
 
 // MARK: - Steps
@@ -130,4 +97,3 @@ struct Workflow: Codable {
     let id, status, definitionKey, userReference: String
     let customerInternalReference: String
 }
-
