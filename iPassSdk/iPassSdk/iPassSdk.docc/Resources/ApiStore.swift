@@ -1,7 +1,7 @@
 //  ApiStore.swift
 //  Created by CS on 24/01/23.
 
-import Foundation
+import UIKit
 import Alamofire
 import PKHUD
 
@@ -99,5 +99,16 @@ class ApiStore : NSObject {
         } else {
             HUD.flash(.labeledError(title: "", subtitle: AppErrors.internetConnection.localizedDescription), delay: 1.0)
         }
+    }
+}
+
+// MARK: - Dictionary Extension
+extension Dictionary where Key == String, Value == String {
+    func toHeader() -> HTTPHeaders {
+        var headers: HTTPHeaders = [:]
+        for (key, value) in self {
+            headers.add(name: key, value: value)
+        }
+        return headers
     }
 }

@@ -12,6 +12,10 @@
 		40184A58297E749C00C491EA /* iPassSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40184A4D297E749C00C491EA /* iPassSdk.framework */; };
 		40184A5D297E749C00C491EA /* iPassSdkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40184A5C297E749C00C491EA /* iPassSdkTests.swift */; };
 		40184A5E297E749C00C491EA /* iPassSdk.h in Headers */ = {isa = PBXBuildFile; fileRef = 40184A50297E749C00C491EA /* iPassSdk.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		407EBBEA29926EF3002BA314 /* AppErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407EBBE929926EF3002BA314 /* AppErrors.swift */; };
+		407EBBEC29926EF5002BA314 /* iPassApiConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407EBBEB29926EF5002BA314 /* iPassApiConstants.swift */; };
+		407EBBEE29926EF9002BA314 /* LocalStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407EBBED29926EF9002BA314 /* LocalStore.swift */; };
+		407EBBF029926EFB002BA314 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407EBBEF29926EFB002BA314 /* Reachability.swift */; };
 		4F3B9D082805C37901E2F1B3 /* Pods_iPassSdk_iPassSdkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B41EB6E7908F755F5630882F /* Pods_iPassSdk_iPassSdkTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +37,10 @@
 		40184A51297E749C00C491EA /* iPassSdk.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = iPassSdk.docc; sourceTree = "<group>"; };
 		40184A57297E749C00C491EA /* iPassSdkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iPassSdkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		40184A5C297E749C00C491EA /* iPassSdkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPassSdkTests.swift; sourceTree = "<group>"; };
+		407EBBE929926EF3002BA314 /* AppErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppErrors.swift; sourceTree = "<group>"; };
+		407EBBEB29926EF5002BA314 /* iPassApiConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPassApiConstants.swift; sourceTree = "<group>"; };
+		407EBBED29926EF9002BA314 /* LocalStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStore.swift; sourceTree = "<group>"; };
+		407EBBEF29926EFB002BA314 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		4370190667E3D98CBB6E6A11 /* Pods-iPassSdk-iPassSdkTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iPassSdk-iPassSdkTests.release.xcconfig"; path = "Target Support Files/Pods-iPassSdk-iPassSdkTests/Pods-iPassSdk-iPassSdkTests.release.xcconfig"; sourceTree = "<group>"; };
 		8A1248BD3339B6A472A434FA /* Pods_iPassSdk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iPassSdk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B41EB6E7908F755F5630882F /* Pods_iPassSdk_iPassSdkTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iPassSdk_iPassSdkTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				40184A50297E749C00C491EA /* iPassSdk.h */,
+				407EBBE629926EE1002BA314 /* iPassSdk */,
 				40184A51297E749C00C491EA /* iPassSdk.docc */,
 			);
 			path = iPassSdk;
@@ -95,6 +104,17 @@
 				40184A5C297E749C00C491EA /* iPassSdkTests.swift */,
 			);
 			path = iPassSdkTests;
+			sourceTree = "<group>";
+		};
+		407EBBE629926EE1002BA314 /* iPassSdk */ = {
+			isa = PBXGroup;
+			children = (
+				407EBBE929926EF3002BA314 /* AppErrors.swift */,
+				407EBBEF29926EFB002BA314 /* Reachability.swift */,
+				407EBBED29926EF9002BA314 /* LocalStore.swift */,
+				407EBBEB29926EF5002BA314 /* iPassApiConstants.swift */,
+			);
+			path = iPassSdk;
 			sourceTree = "<group>";
 		};
 		5B996B825FDE296C2A73A456 /* Pods */ = {
@@ -293,6 +313,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				407EBBEA29926EF3002BA314 /* AppErrors.swift in Sources */,
+				407EBBEC29926EF5002BA314 /* iPassApiConstants.swift in Sources */,
+				407EBBF029926EFB002BA314 /* Reachability.swift in Sources */,
+				407EBBEE29926EF9002BA314 /* LocalStore.swift in Sources */,
 				40184A52297E749C00C491EA /* iPassSdk.docc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -498,6 +522,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 39D91133B8E3F9EC5E319D18 /* Pods-iPassSdk-iPassSdkTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -514,6 +539,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4370190667E3D98CBB6E6A11 /* Pods-iPassSdk-iPassSdkTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
